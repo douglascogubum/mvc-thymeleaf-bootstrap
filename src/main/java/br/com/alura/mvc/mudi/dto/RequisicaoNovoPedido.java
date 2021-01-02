@@ -3,6 +3,7 @@ package br.com.alura.mvc.mudi.dto;
 import javax.validation.constraints.NotBlank;
 
 import br.com.alura.mvc.mudi.model.Pedido;
+import br.com.alura.mvc.mudi.model.enums.StatusPedido;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,6 +28,7 @@ public class RequisicaoNovoPedido {
 		pedido.setUrlProduct(urlProduct);
 		pedido.setUrlImage(urlImage);
 		pedido.setDescription(description);
+		pedido.setStatus(StatusPedido.AGUARDANDO);
 		
 		return pedido;
 	}
